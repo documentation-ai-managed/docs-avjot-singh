@@ -1,0 +1,122 @@
+---
+title: Quickstart: Getting Started
+description: Set up your Avjot Singh documentation space and create your first project page in just a few minutes.
+---
+
+## Prerequisites
+
+Before you begin, ensure you have the following ready:
+
+<Callout kind="info">
+
+- A modern web browser like Chrome, Firefox, or Safari
+- An email address for account verification
+- Optional: A GitHub account for version control integration
+
+</Callout>
+
+## Create Your Account and Log In
+
+Follow these steps to set up your Avjot Singh account quickly.
+
+<Steps>
+  <Step title="Visit the Dashboard" icon="monitor">
+    Open your browser and navigate to `https://dashboard.avjotsingh.com`.
+  </Step>
+  <Step title="Sign Up" icon="user-plus">
+    Click **Sign Up** and enter your email, name, and a strong password. Avjot Singh sends a verification email immediately.
+  </Step>
+  <Step title="Verify Email" icon="mail">
+    Check your inbox and click the verification link. Return to the dashboard and log in with your credentials.
+  </Step>
+  <Step title="Complete Onboarding" icon="check-circle">
+    Answer a few quick questions about your project to personalize your space.
+  </Step>
+</Steps>
+
+## Configure Your Initial Space
+
+Customize your documentation space settings to match your project needs.
+
+<Tabs>
+  <Tab title="Basic Setup" icon="settings">
+    In the dashboard, select **Space Settings** from the sidebar. Set your space name (e.g., "My Project Docs") and brand color to `#3B82F6`.
+  </Tab>
+  <Tab title="Integrations" icon="plug">
+    Enable GitHub sync under **Integrations**. Connect your repository by pasting the repo URL, like `https://github.com/yourusername/my-project-docs`.
+  </Tab>
+  <Tab title="Permissions" icon="shield">
+    Invite team members via email. Assign roles: Admin, Editor, or Viewer.
+  </Tab>
+</Tabs>
+
+<Callout kind="tip">
+  Save changes after each tab. Your space updates in real-time.
+</Callout>
+
+## Create Your First Documentation Page
+
+Build your first MDX page with live preview.
+
+<Steps>
+  <Step title="New Page" icon="plus">
+    Click **New Page** in the top navigation. Name it "Introduction".
+  </Step>
+  <Step title="Add Content" icon="edit-3">
+    Use the editor to write your page. Here's a starter MDX template:
+    
+    <CodeGroup tabs="MDX,Basics">
+    ````mdx
+    ---
+    title: Introduction
+    description: Welcome to my project docs.
+    ---
+    
+    ## Overview
+    
+    This is your first page.
+    ````
+    
+    ````mdx
+    # Hello World (Markdown only)
+    
+    - List item 1
+    - List item 2
+    ````
+    </CodeGroup>
+  </Step>
+  <Step title="Preview and Publish" icon="eye">
+    Toggle the preview pane. Click **Publish** to make it live. Share the URL: `https://docs.avjotsingh.com/yourspace/introduction`.
+  </Step>
+</Steps>
+
+## Interface Tour
+
+Explore the main interface components side-by-side.
+
+<Columns cols={3}>
+  <Card title="Sidebar" icon="menu" horizontal>
+    Navigation to pages, settings, and search.
+  </Card>
+  <Card title="Editor" icon="edit-3" horizontal>
+    Real-time MDX editor with syntax highlighting and auto-save.
+  </Card>
+  <Card title="Preview" icon="eye" horizontal>
+    Live rendering with components like Steps and Callouts.
+  </Card>
+</Columns>
+
+## Next Steps
+
+<Columns cols={2}>
+  <Card title="Learn MDX Components" icon="code" href="/introduction">
+    Dive into advanced components and layouts.
+  </Card>
+  <Card title="Authentication Setup" icon="lock" href="/authentication">
+    Secure your docs with user auth.
+  </Card>
+</Columns>
+
+<Callout kind="success">
+  Congratulations! Your Avjot Singh space is ready. Create more pages and organize your project docs.
+</Callout>

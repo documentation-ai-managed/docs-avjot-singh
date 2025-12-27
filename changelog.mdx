@@ -1,0 +1,128 @@
+---
+title: Changelog
+description: Track the latest updates, improvements, and fixes in Avjot Singh Documentation.
+---
+
+## Recent Releases
+
+Stay informed about every update to Avjot Singh Documentation. You receive new features, performance improvements, and critical bug fixes to enhance your documentation experience. Review the latest releases below, ordered from newest to oldest.
+
+<Update label="2024-10-15" description="v1.2.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- Added support for custom brand colors, enabling you to set `#3B82F6` as your primary theme color directly in the configuration.
+- Introduced `<Columns>` and `<Card>` components for creating dynamic feature grids and navigation sections.
+- Enabled multi-language code examples with `<CodeGroup>` for broader developer accessibility.
+
+## Improvements
+
+- Enhanced search functionality with fuzzy matching for faster topic discovery.
+- Optimized page load times by `>30%` through lazy-loading of images and components.
+
+## Bug Fixes
+
+- Fixed parsing errors in nested code blocks using four backticks.
+- Resolved heading hierarchy issues preventing skipped levels like H2 to H4.
+
+</Update>
+
+<Update label="2024-09-20" description="v1.1.0" tags={["feature", "bugfix"]}>
+
+## New Features
+
+- Integrated `<Steps>` and `<Tabs>` components for step-by-step guides and platform-specific instructions.
+- Added `<Callout>` with kinds like `info`, `tip`, and `danger` for better user notifications.
+
+## Bug Fixes
+
+- Corrected special character escaping for `{`, `}`, `<`, and `>` in prose text.
+- Patched frontmatter YAML parsing by eliminating blank lines inside blocks.
+
+</Update>
+
+<Update label="2024-08-10" description="v1.0.0" tags={["feature", "breaking"]}>
+
+## New Features
+
+- Launched core MDX documentation engine with YAML frontmatter, H2-first headings, and JSX component support.
+- Implemented mermaid diagram rendering via code blocks (not components).
+
+## Breaking Changes
+
+- Removed H1 headings from body content; titles now live exclusively in frontmatter.
+- Standardized attribute syntax: double quotes for strings, JSX braces for arrays and numbers.
+
+</Update>
+
+## Upcoming Changes
+
+Preview what's coming next to Avjot Singh Documentation. These enhancements focus on interactivity and customization.
+
+<Columns cols={2}>
+  <Card title="Interactive Components" icon="zap" href="#recent-releases">
+    Roll out `<ExpandableGroup>` and `<Update>` for dynamic FAQs and changelogs.
+  </Card>
+  <Card title="API Integration" icon="code" href="#recent-releases">
+    Add `<Request>` and `<Response>` for live API documentation examples.
+  </Card>
+  <Card title="Advanced Theming" icon="settings" href="#recent-releases">
+    Full CSS variable support beyond brand color `#3B82F6`.
+  </Card>
+</Columns>
+
+## How to Stay Updated
+
+<Callout kind="tip">
+  Subscribe to notifications or check this page regularly. You can also contribute by suggesting changes via the feedback form.
+</Callout>
+
+## Contributing to the Changelog
+
+Follow these steps to submit your own update suggestions.
+
+<Steps>
+  <Step title="Review Guidelines" icon="book-open">
+
+    Ensure your proposal follows the `<Update>` format:
+
+````jsx
+<Update label="YYYY-MM-DD" description="vX.Y.Z" tags={["feature"]}>
+## New Features
+- Your change here
+</Update>
+````
+
+  </Step>
+  <Step title="Submit Feedback" icon="message-circle">
+
+    Open an issue on the repository with your proposed content.
+
+  </Step>
+  <Step title="Test Locally" icon="terminal">
+
+    Preview changes using:
+
+````bash
+npm run dev
+````
+
+  </Step>
+</Steps>
+
+<Expandable title="Example CodeGroup Contribution" default-open="false">
+
+  Demonstrate multi-language support like this:
+
+<CodeGroup tabs="JavaScript,Python">
+  ```javascript
+  // Add new feature flag
+  const featureFlag = process.env.NEW_FEATURE === 'true';
+  ```
+  ```python
+  # Enable via environment
+  feature_flag = os.getenv('NEW_FEATURE') == 'true'
+  ```
+</CodeGroup>
+
+</Expandable>

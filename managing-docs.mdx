@@ -1,0 +1,129 @@
+---
+title: Managing Documentation
+description: Learn how to create, organize, and maintain your project documentation within the Avjot Singh space.
+---
+
+## Overview
+
+Manage your Avjot Singh documentation effectively to keep your project resources clear and accessible. You create new pages, structure content hierarchically, embed rich media, and track changes over time. Follow these guides to streamline your workflow.
+
+<Columns cols={3}>
+  <Card title="Edit Pages" icon="edit-3" href="#editing-pages">
+    Format content with MDX components and markdown.
+  </Card>
+  <Card title="Organize Folders" icon="folder" href="#organizing-content">
+    Use folders and links for intuitive navigation.
+  </Card>
+  <Card title="Add Media" icon="image" href="#adding-multimedia">
+    Embed images, videos, and interactive elements.
+  </Card>
+</Columns>
+
+## Editing and Formatting Pages
+
+Edit pages directly in the Avjot Singh editor to apply rich formatting. Start by opening a page, then use markdown syntax combined with MDX components for professional results.
+
+<Steps>
+  <Step title="Open Editor" icon="edit">
+    Navigate to your page and click the edit button.
+  </Step>
+  <Step title="Add Headings" icon="heading">
+    Use `## H2` for sections, never `# H1` as the title uses frontmatter.
+  </Step>
+  <Step title="Insert Components" icon="layers">
+    Add `<Callout kind="info">` for notices.
+  </Step>
+  <Step title="Preview and Save" icon="save">
+    Preview changes, then commit with a descriptive message.
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+  Always escape special characters like `{variable}` or `<100ms` with backticks to prevent parsing errors.
+</Callout>
+
+## Organizing Content with Folders and Links
+
+Structure your documentation using folders for hierarchy and links for cross-references. Create folders like `/guides/`, `/api/`, and `/faq/` to group related pages.
+
+<Tabs>
+  <Tab title="Folders" icon="folder">
+    Right-click in the file explorer to create a new folder. Move pages by drag-and-drop.
+
+    ```
+    /docs
+    ├── /introduction.mdx
+    ├── /quickstart.mdx
+    └── /guides/
+        └── managing-docs.mdx
+    ```
+  </Tab>
+  <Tab title="Internal Links" icon="link">
+    Link to other pages with relative paths: `[Quickstart](/quickstart)`.
+
+    Use anchor links for sections: `[Editing](#editing-pages)`.
+  </Tab>
+  <Tab title="Navigation Cards" icon="navigation">
+    Add `<Card title="API Reference" href="/api">` for dynamic menus.
+  </Tab>
+</Tabs>
+
+## Adding Multimedia and Embeds
+
+Enhance pages with images, videos, and iframes. Upload assets to your space or use external URLs.
+
+<CodeGroup tabs="Image,Video,Iframe">
+  ```jsx
+  <Image
+    src="https://example.com/screenshot.png"
+    alt="Dashboard overview"
+    width="800"
+    height="600"
+  />
+  ```
+  ```jsx
+  <Video
+    src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+    title="Tutorial video"
+    width="560"
+    height="315"
+  />
+  ```
+  ```jsx
+  <Iframe
+    src="https://example.com/embed"
+    title="Interactive demo"
+    width="100%"
+    height="400"
+  />
+  ```
+</CodeGroup>
+
+<Callout kind="alert">
+  Provide `alt` text for images and `title` for embeds to ensure accessibility.
+</Callout>
+
+## Version History and Revisions
+
+Track changes with built-in version history. Access it via the page menu to view, compare, or restore previous versions.
+
+<ExpandableGroup>
+  <Expandable title="Viewing History" default-open="true">
+    Click "History" to see a timeline of edits. Each entry shows the author, date, and commit message.
+  </Expandable>
+  <Expandable title="Comparing Versions">
+    Select two revisions to diff changes. Restore by clicking "Revert".
+  </Expandable>
+  <Expandable title="Best Practices">
+    Write clear commit messages like "Fix typo in editing section" and use branches for major updates.
+  </Expandable>
+</ExpandableGroup>
+
+<Columns cols={2}>
+  <Card title="Next: Quickstart" icon="zap" href="/quickstart">
+    Set up your first project page.
+  </Card>
+  <Card title="API Reference" icon="code" href="/api">
+    Embed API examples.
+  </Card>
+</Columns>

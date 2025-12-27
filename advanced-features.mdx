@@ -1,0 +1,149 @@
+---
+title: Advanced Features
+description: Explore collaboration tools, customization options, and best practices for scaling your documentation.
+---
+
+## Overview
+
+Unlock the full potential of Avjot Singh's documentation platform with advanced features. You gain precise control over user permissions, customize branding to match your identity, optimize search capabilities, and seamlessly export or import content. These tools help you scale projects efficiently while maintaining security and consistency.
+
+<Columns cols={2}>
+  <Card title="Permissions & Sharing" icon="users" href="#user-permissions">
+    Manage access levels and collaborate securely.
+  </Card>
+  <Card title="Custom Themes" icon="palette" href="#custom-themes">
+    Tailor your docs with branding and styles.
+  </Card>
+  <Card title="Search Tools" icon="search" href="#search-tools">
+    Enhance discoverability with advanced indexing.
+  </Card>
+  <Card title="Export/Import" icon="upload" href="#export-import">
+    Migrate content effortlessly.
+  </Card>
+</Columns>
+
+## User Permissions and Sharing
+
+Control who accesses your documentation space. Assign roles like viewer, editor, or admin to team members. Share specific pages via public links with expiration dates.
+
+<Callout kind="tip">
+  Start with least privilege: Assign viewer roles first, then escalate as needed.
+</Callout>
+
+<Steps>
+  <Step title="Invite Users" icon="user-plus">
+    Navigate to the `Settings` panel in your dashboard.
+    
+    Enter email addresses and select roles.
+  </Step>
+  <Step title="Set Permissions" icon="shield">
+    For each page, choose `Public`, `Team Only`, or `Private`.
+    
+    Use granular controls for sub-pages.
+  </Step>
+  <Step title="Generate Share Links" icon="link">
+    Click `Share` > `Create Link` and set expiry (e.g., 30 days).
+  </Step>
+</Steps>
+
+## Custom Themes and Branding
+
+Personalize your docs with custom themes. Apply your brand color (`#3B82F6`), fonts, and logos. Override defaults via a JSON configuration file.
+
+<Tabs>
+  <Tab title="JSON Config" icon="code">
+    
+    Upload this config to `dashboard.example.com/settings/theme`:
+    
+````json
+{
+  "primaryColor": "#3B82F6",
+  "fontFamily": "Inter, sans-serif",
+  "logoUrl": "https://your-logo.com/logo.png",
+  "customCSS": "body { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }"
+}
+````
+  </Tab>
+  <Tab title="CSS Overrides" icon="palette">
+    
+    Add custom styles in the theme editor:
+    
+````css
+.navbar {
+  background-color: #3B82F6;
+}
+
+.sidebar a:hover {
+  color: #1E40AF;
+  border-left: 4px solid #3B82F6;
+}
+````
+  </Tab>
+</Tabs>
+
+<CodeGroup tabs="API,CLI">
+```javascript
+// API: Update theme
+const response = await fetch('https://api.example.com/v1/themes', {
+  method: 'PUT',
+  headers: { 'Authorization': 'Bearer YOUR_TOKEN' },
+  body: JSON.stringify(themeConfig)
+});
+```
+
+```bash
+# CLI: Apply theme
+avjot theme apply --config theme.json --token YOUR_TOKEN
+```
+</CodeGroup>
+
+## Search and Indexing Tools
+
+Boost discoverability with full-text search and custom indexing. Avjot Singh indexes pages automatically, but you can add metadata tags for precision.
+
+<Expandable title="Advanced Indexing Config" default-open="false">
+  
+  Customize via API:
+  
+````javascript
+POST https://api.example.com/v1/index
+{
+  "pages": ["/docs/advanced"],
+  "tags": ["feature", "guide"],
+  "boost": 2.5
+}
+````
+
+  This prioritizes matching pages in search results.
+  
+</Expandable>
+
+## Exporting and Importing Content
+
+Migrate docs between spaces or backups. Export to Markdown, PDF, or ZIP; import from GitHub or ZIP files.
+
+<Steps>
+  <Step title="Export Content" icon="download">
+    Select pages > `Export` > Choose format (MDX, PDF).
+    
+    Download includes images and assets.
+  </Step>
+  <Step title="Import Content" icon="upload">
+    Go to `Import` > Upload ZIP or connect GitHub repo.
+    
+    Review mappings before confirming.
+  </Step>
+</Steps>
+
+<Callout kind="alert">
+  Large exports (>500 pages) require premium storage. Test imports on staging first.
+</Callout>
+
+## Best Practices
+
+- Regularly audit permissions to prevent unauthorized access.
+- Version themes before applying changes.
+- Use tags consistently for optimal search performance.
+- Schedule weekly exports for backups.
+
+These features ensure your Avjot Singh documentation scales with your projects.
